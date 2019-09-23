@@ -118,11 +118,11 @@ func Insert(r *http.Request) Article {
 	var article Article
 	_ = json.NewDecoder(r.Body).Decode(&article)
 
-	insForm, err := db.Prepare("INSERT INTO " + tableName + " (header, body) VALUES(?,?)")
+	insForm, err := db.Prepare("INSERT INTO " + tableName + " (header, body, typeId) VALUES(?,?,?)")
 	if err != nil {
 		panic(err.Error())
 	}
-	value, err := insForm.Exec(article.Header, article.Body)
+	value, err := insForm.Exec(article.Header, article.Body, article.Type.ID)
 
 	if err != nil {
 		panic(err.Error())

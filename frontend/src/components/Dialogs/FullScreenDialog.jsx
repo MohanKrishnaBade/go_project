@@ -40,20 +40,22 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 let data = {
     "header": null,
     "body": null,
-    "type":null
+    "type":{
+        ID:null
+    }
 
 };
 
 export default function FullScreenDialog(props) {
     const classes = useStyles();
     const [open, setOpen] = React.useState(false);
-    const [data, setData] = React.useState(null);
+    const [dropDownData, setDropDownData] = React.useState(null);
     const [values, setValues] = React.useState({
         type: '1',
         name: 'hai',
     });
 
-    if(data === null){
+    if(dropDownData === null){
         loadDropdownData();
     }
     function handleClickOpen() {
@@ -69,8 +71,6 @@ export default function FullScreenDialog(props) {
             ...oldValues,
             [event.target.name]: event.target.value,
         }));
-
-        console.log(values);
     }
 
     function setSelectedValue(event) {
@@ -81,7 +81,7 @@ export default function FullScreenDialog(props) {
     function loadDropdownData(){
         axios.get("/type/all")
             .then((response) => {
-                setData(response.data)
+                setDropDownData(response.data)
             }, (error) => {
                 console.error(error);
             });
@@ -132,13 +132,13 @@ export default function FullScreenDialog(props) {
 
                                         <Select
                                             value={values.type}
-                                            onChange={handleChange}
+                                            onChange={(e) => onChange(e, "type")}
                                             inputProps={{
                                                 name: 'type',
                                                 id: 'age-helper',
                                             }}
                                         >
-                                            {data && data.map((item) =>
+                                            {dropDownData && dropDownData.map((item) =>
                                                 <MenuItem value={item.ID}>{item.Name}</MenuItem>
                                             )}
                                         </Select>
@@ -171,6 +171,9 @@ export default function FullScreenDialog(props) {
     function onChange(e, key) {
         if (key === "header") {
             data.header = e.target.value;
+        } else if( key === "type"){
+            data.type.ID = e.target.value;
+            handleChange(e);
         } else {
             data.body = e.target.value;
         }

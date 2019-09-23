@@ -7,7 +7,6 @@ import (
 	"encoding/json"
 	"log"
 	"sync"
-	_ "github.com/go-sql-driver/mysql"
 	"../connection"
 )
 
