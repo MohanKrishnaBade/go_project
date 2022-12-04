@@ -3799,8 +3799,8 @@ decamelize@^2.0.0:
     xregexp "4.0.0"
 
 decode-uri-component@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.0.tgz#eb3913333458775cb84cd1a1fae062106bb87545"
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.2.tgz#e69dbe25d37941171dd540e024c444cd5188e1e9"
 
 dedent@^0.7.0:
   version "0.7.0"
@@ -4919,6 +4919,12 @@ get-stream@^4.0.0, get-stream@^4.1.0:
   resolved "https://registry.yarnpkg.com/get-stream/-/get-stream-4.1.0.tgz#c1b255575f3dc21d59bfc79cd3d2b46b1c3a54b5"
   dependencies:
     pump "^3.0.0"
+
+get-user-locale@^1.2.0:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/get-user-locale/-/get-user-locale-1.5.1.tgz#18a9ba2cfeed0e713ea00968efa75d620523a5ea"
+  dependencies:
+    lodash.memoize "^4.1.1"
 
 get-value@^2.0.3, get-value@^2.0.6:
   version "2.0.6"
@@ -6682,7 +6688,7 @@ lodash.ismatch@^4.4.0:
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/lodash.ismatch/-/lodash.ismatch-4.4.0.tgz#756cb5150ca3ba6f11085a78849645f188f85f37"
 
-lodash.memoize@^4.1.2:
+lodash.memoize@^4.1.1, lodash.memoize@^4.1.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/lodash.memoize/-/lodash.memoize-4.1.2.tgz#bcc6c49a42a2840ed997f323eada5ecd182e0bfe"
 
@@ -6888,6 +6894,10 @@ meow@^4.0.0:
     read-pkg-up "^3.0.0"
     redent "^2.0.0"
     trim-newlines "^2.0.0"
+
+merge-class-names@^1.1.1:
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/merge-class-names/-/merge-class-names-1.4.2.tgz#78d6d95ab259e7e647252a7988fd25a27d5a8835"
 
 merge-deep@^3.0.2:
   version "3.0.2"
@@ -8745,6 +8755,15 @@ react-app-polyfill@^1.0.1:
     regenerator-runtime "0.13.3"
     whatwg-fetch "3.0.0"
 
+react-calendar@^2.19.1:
+  version "2.19.2"
+  resolved "https://registry.yarnpkg.com/react-calendar/-/react-calendar-2.19.2.tgz#496e78eb11a00aee1ae6b5d02d221ed1ca2db952"
+  dependencies:
+    get-user-locale "^1.2.0"
+    merge-class-names "^1.1.1"
+    prop-types "^15.6.0"
+    react-lifecycles-compat "^3.0.4"
+
 react-chartist@0.13.3:
   version "0.13.3"
   resolved "https://registry.yarnpkg.com/react-chartist/-/react-chartist-0.13.3.tgz#2a6f677bab45b3474c828b74ef244fc4fca08d0b"
@@ -8821,6 +8840,10 @@ react-google-maps@9.4.5:
 react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4, react-is@^16.8.6:
   version "16.9.0"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.9.0.tgz#21ca9561399aad0ff1a7701c01683e8ca981edcb"
+
+react-lifecycles-compat@^3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
 
 react-material-ui-calendar@^0.2.3:
   version "0.2.3"
